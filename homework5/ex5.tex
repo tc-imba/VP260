@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{stmaryrd}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 5}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$I=\frac{U}{R+2r}=\frac{12-8}{1+1+8}=0.4A$$
+\item
+$$P_R=I^2R=1.28W$$
+$$P_r=2I^2r=0.32W$$
+\item
+In $\varepsilon_1$ chemical energy is being converted into electrical energy.
+$$P=\varepsilon_1I=4.8W$$
+\item
+In $\varepsilon_2$ electrical energy is being converted into chemical energy.
+$$P=\varepsilon_2I=3.2W$$
+\item
+$$4.8W-3.2W=1.28W+0.32W=1.6W$$
+\end{enumerate}
+
+\section{}
+\begin{equation*}
+\begin{bmatrix} R_1+R_2 & -R_2 \\ -R_2 & R_2+R_3 \end{bmatrix}
+\begin{bmatrix} i_1 \\ i_2 \end{bmatrix}=
+\begin{bmatrix} -\varepsilon_1+\varepsilon_2 \\ -\varepsilon_3 \end{bmatrix}
+\end{equation*}
+$$i_1=-\frac{99}{19}A\quad i_2=-\frac{120}{19}A$$
+$$I_1=\frac{99}{19}A\quad I_2=\frac{31}{19}A\quad I_3=\frac{120}{19}A$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+When switch S is closed, the voltage on the bulbs doesn't change, so the brightness of them won't change.
+\item
+$$U=\varepsilon\frac{R}{r+R}=\varepsilon\left(1-\frac{r}{R}\right)$$
+When switch S is closed, R becomes smaller, so U becomes smaller , and the brightness of the bulbs will be darker.
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$Q_{max}e^{-t/RC}\leqslant e$$
+$$t_d=RC\ln\frac{Q_{max}}{e}\approx15.10s$$
+\item
+No. $t_d=RC\ln\frac{Q_{max}}{e}$, so it is dependent on $R$ and $C$
+\end{enumerate}
+
+\section{}
+At point b,
+$$\frac{U_b-0}{M}+\frac{U_b-\varepsilon}{N}+\frac{U_b-U_c}{r}=0$$
+At point c,
+$$\frac{U_c-0}{X}+\frac{U_c-\varepsilon}{P}+\frac{U_c-U_b}{r}=0$$
+When $U_b=U_c$,
+$$\frac{U}{M}\cdot\frac{N}{P}+\frac{U-\varepsilon}{N}\cdot\frac{N}{P}=0$$
+$$\frac{U}{MP/N}+\frac{U-\varepsilon}{p}=0$$
+$$X=\frac{MP}{N}$$
+\end{document}

@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{stmaryrd}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 2}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+When $r>0$,
+\begin{align*}
+div\bar{E}=\nabla\cdot\bar{E}&=\frac{q}{4\pi\varepsilon_0}\left[\frac{\partial}{\partial x}\left(\frac{x}{r}\right)+\frac{\partial}{\partial y}\left(\frac{y}{r}\right)+\frac{\partial}{\partial z}\left(\frac{z}{r}\right)\right]\\
+&=\frac{q}{4\pi\varepsilon_0}\cdot\frac{3(x^2+y^2+z^2)^{1.5}-3x^2(x^2+y^2+z^2)^{0.5}-3y^2(x^2+y^2+z^2)^{0.5}-3z^2(x^2+y^2+z^2)^{0.5}}{(x^2+y^2+z^2)^{3}}\\
+&=\frac{q}{4\pi\varepsilon_0}\cdot\frac{3(x^2+y^2+z^2)^{1.5}-3(x^2+y^2+z^2)^{1.5}}{(x^2+y^2+z^2)^{3}}\\
+&=0
+\end{align*}
+When $r=0$, $(x^2+y^2+z^2)^{3}=0$, so $div\bar{E}\to\infty$
+\item
+$$\oint_{\Sigma}\bar{E}d\bar{A}=\int_{\Omega}div\bar{E}dV=\frac{1}{\varepsilon_0}\int_{\Omega}\rho(\bar{r})dV$$
+Since $\rho(\bar{r})\to\infty$ when $r=0$, $div\bar{E}\to\infty$
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+\begin{align*}
+\rho(\bar{r})=\varepsilon_0div\bar{E}&=\varepsilon_0k\left(\frac{\partial}{\partial x}xr^2+\frac{\partial}{\partial y}yr^2+\frac{\partial}{\partial z}zr^2\right)\\
+&=\varepsilon_0k(3r^2+2x^2+2y^2+2z^2)\\
+&=5\varepsilon_0kr^2
+\end{align*}
+\item
+\begin{enumerate}[(1)]
+\item
+$$q=\int_{\Omega}\rho(\bar{r})dV=\int_0^R\rho(\bar{r})\cdot4\pi r^2dr=\int_0^R20\varepsilon_0k\pi r^4dr=4\varepsilon_0k\pi r^5$$
+\item
+$$\frac{q}{\varepsilon_0}=\oint_{\Sigma}\bar{E}d\bar{A}=ES=kr^3\cdot4\pi r^2$$
+$$q=4\varepsilon_0k\pi r^5$$
+\end{enumerate}
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$div\bar{E}=\frac{\rho(r)}{\varepsilon_0}$$
+Suppose $E=A\hat{n_x}+B\hat{n_x}+C\hat{n_z}$,
+$$div\bar{E}=0$$
+$$\rho(r)=0$$
+So this region of space must be electrically neutral.
+\item
+No. As is shown in Problem 1, $\rho(r)=0$ when $r>0$ around a point charge, but $\bar{E}$ is actually not uniform in this region.
+\end{enumerate}
+
+\section{}
+In the three surfaces which doesn't contain the point charge, since they are symmetric, and the cube is only $\frac{1}{8}$ of the complete cube around the point charge, each $\phi=\frac{1}{24}\Phi$
+$$\Phi=\frac{Q}{\varepsilon_0}$$
+$$\phi_{ABCD}=\frac{Q}{24\varepsilon_0}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$q=\int_{\Omega}\rho(\bar{r})dV=\int_0^R\rho(\bar{r})\cdot4\pi r^2dr=\int_0^R\frac{4A\pi r^3}{R}dr=\pi AR^3$$
+\item
+$E(r)$ inside the ball when $r<R$,
+$$q=\int_{\Omega}\rho(\bar{r})dV=\int_0^r\rho(\bar{r})\cdot4\pi r^2dr=\int_0^r\frac{4A\pi r^3}{R}dr=\frac{\pi Ar^4}{R}$$
+$$\frac{\pi Ar^4}{R\varepsilon_0}=E(r)\cdot4\pi r^2$$
+$$E(r)=\frac{Ar^2}{4\varepsilon_0R}$$
+$E(r)$ outside the ball when $r>R$,
+$$\frac{\pi AR^3}{\varepsilon_0}=E(r)\cdot4\pi r^2$$
+$$E(r)=\frac{AR^3}{4\varepsilon_0r^2}$$
+\end{enumerate}
+
+\section{}
+Suppose the surface of the plane is $S$\\
+In the slab, where $|y|\leqslant d$
+$$\frac{2\rho|y|S}{\varepsilon_0}=E(y)\cdot2S$$
+$$E(y)=\frac{\rho|y|}{\varepsilon_0}$$
+Outside the slab, where $|y|>d$
+$$\frac{2\rho dS}{\varepsilon_0}=E(y)\cdot2S$$
+$$E(y)=\frac{\rho d}{\varepsilon_0}$$
+\begin{eqnarray*}
+E(y)=\left\{
+\begin{array}{ll}
+\frac{\rho|y|}{\varepsilon_0} & |y|\leqslant d \\
+\frac{\rho d}{\varepsilon_0}  & |y|>d \\
+\end{array}
+\right.
+\end{eqnarray*}
+
+\section{}
+Suppose we can fill the cylinder with charge of constant density $\rho$ and $-\rho$, then the total charge in the cylinder won't change.
+Suppose there is a point A in the cavity, the center of the cavity is $O_1$ and the center of the cylinder is $O_2$
+$$\frac{-\rho\pi O_1A^2h}{\varepsilon_0}=\overline{E_1}\cdot2\pi\overline{O_1A}h$$
+$$\overline{E_1}=-\frac{\rho}{2\varepsilon_0}\overline{O_1A}$$
+$$\frac{\rho\pi O_2A^2h}{\varepsilon_0}=\overline{E_2}\cdot2\pi\overline{O_2A}h$$
+$$\overline{E_2}=\frac{\rho}{2\varepsilon_0}\overline{O_2A}$$
+$$\bar{E}=\overline{E_1}+\overline{E_2}=\frac{\rho}{2\varepsilon_0}\overline{O_2O_1}$$
+The magnitude is $\frac{\rho b}{2\varepsilon_0}$ and the direction is $\overline{O_1O_2}$ since $\rho<0$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$\sigma_a=-\frac{q_a}{4\pi r_a^2}$$
+$$\sigma_b=-\frac{q_b}{4\pi r_b^2}$$
+They are uniform since they are symmetric.
+$$\sigma_R=-\frac{q_a+q_b}{4\pi R^2}$$
+It is uniform since electrostatic shield.
+\item
+$$\frac{q_a+q_b}{\varepsilon_0}=E(r)\cdot4\pi r^2$$
+$$E(r)=\frac{q_a+q_b}{4\varepsilon_0\pi r^2}$$
+\item
+In cavity a,
+$$\frac{q_a}{\varepsilon_0}=E(r)\cdot4\pi r^2$$
+$$E_a(r)=\frac{q_a}{4\varepsilon_0\pi r^2}$$
+In cavity b,
+$$\frac{q_b}{\varepsilon_0}=E(r)\cdot4\pi r^2$$
+$$E_b(r)=\frac{q_b}{4\varepsilon_0\pi r^2}$$
+\item
+since electrostatic shield, there isn't force exerted on $q_a$ and $q_b$. So $F_a=F_b=0$
+\item
+$\sigma_R$ and $E(r)$ will change because the electric field outside the ball is influenced by $q_c$.
+Others won't change because of electrostatic shield.
+
+\end{enumerate}
+
+\end{document}

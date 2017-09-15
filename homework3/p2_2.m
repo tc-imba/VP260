@@ -1,0 +1,13 @@
+a=1;b=2;k=1;
+e0=8.854e-12;
+syms U1 U2 U3 r;
+U3(r)=k/(2*e0*r)*(b^2-a^2);
+U2(r)=k/(2*e0*r)*(2*b*r-r^2-a^2);
+U1(r)=k/(e0)*(b-a);
+hold on;
+ezplot(U1,[0 a]);
+ezplot(U2,[a b]);
+ezplot(U3,[b 5]);
+axis([0 5 0 1.2e11]);
+title('U(r)');
+hold off;

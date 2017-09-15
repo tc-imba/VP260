@@ -1,0 +1,12 @@
+a=0.532e-10;
+e=1.6e10-19;
+e0=8.854e-12;
+syms E V r;
+figure(1);
+E(r)=e/(4*pi*e0)*((2/a^2+2/a/r+a/r^2)*exp(-2*r/a)-1/r^2);
+ezplot(E);
+title('E(r)');
+figure(2);
+V(r)=e/(4*pi*r*e0)*((a+r)/a*exp(-2*r/a)-1);
+ezplot(V);
+title('V(r)');

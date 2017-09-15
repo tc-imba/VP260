@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{stmaryrd}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 7}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+Let up to be the direction of y-axis and right to the direction of x-axis.\\
+In the bottom side,
+$$B\cdot2\pi s=\mu_0I$$
+$$B=\frac{\mu_0I}{2\pi s}$$
+$$F=-LIB=-\frac{\mu_0I^2L}{2\pi s}\hat{n_y}$$
+In the left and right sides,
+$$B\cdot2\pi x=\mu_0I$$
+$$B=\frac{\mu_0I}{2\pi x}$$
+$$F_{ly}=F_{ry}=\int_s^{s+\frac{\sqrt{3}}{2}a}\frac{\mu_0I^2dl}{2\pi s}
+=\frac{\mu_0I^2}{2\pi}\ln\frac{s+\frac{\sqrt{3}}{2}a}{s}\hat{n_y}$$
+$$F_x=F_{lx}+F_{rx}=0$$
+$$F=\frac{\mu_0I^2}{2\pi}\left(2\ln\frac{s+\frac{\sqrt{3}}{2}a}{s}-\frac{L}{s}\right)\hat{n_y}$$
+
+\section{}
+Suppose the direction of v to be the x-axis and a side pointing outside the paper to be the y-axis.
+\begin{enumerate}[(a)]
+\item
+If we split the plate to infinite wires, and the width of each of the wires is $dy$,\\
+then $q=\sigma dy\cdot x$ on each wire.
+$$dI=\frac{q}{t}=\frac{\sigma dy\cdot x}{x/v}=\sigma vdy$$
+Since it is symmetric, $B_z$ on the z-axis formed by the wires are cancelled, and $B_y$ on the y-axis is $B\cos\theta$, suppose the distance between a point and the plate is r,
+$$y=r\tan\theta$$
+$$dy=\frac{r}{\cos^2\theta}d\theta$$
+$$B=\int_{-y/2}^{y/2}\frac{\mu_0\sigma v\cos\theta}{2\pi\sqrt{r^2+y^2}}dy=\int_{-\pi/2}^{\pi/2}\frac{\mu_0\sigma v\cos\theta\frac{r}{\cos^2\theta}}{2\pi\frac{r}{\cos\theta}}d\theta=\frac{1}{2}\mu_0\sigma v$$
+Above and below the plates, B is cancelled, so $B=0$
+Between the plates, B is added, so $B=\mu_0\sigma v$, opposite the y-axis.
+
+\item
+$$dF=LIB=x\cdot\sigma vdy\cdot\frac{1}{2}\mu_0\sigma v=\frac{1}{2}x\mu_0\sigma^2v^2dy$$
+$$F=\int_0^ydF=\frac{1}{2}xy\mu_0\sigma^2v^2$$
+$$F_u=\frac{F}{xy}=\frac{1}{2}\mu_0\sigma^2v^2,\ \rm{pointing\ to\ the\ top}$$
+
+\item
+$$\mu_0\sigma v^2=2\cdot\frac{\sigma}{2\varepsilon_0}$$
+$$v=\frac{1}{\mu_0\varepsilon_0}$$
+
+\end{enumerate}
+
+
+\section{}
+$$B\cdot2\pi r=\mu_0\int dI$$
+$$dI=\frac{dQ}{t}=\frac{Q\cdot2\pi rdr}{\pi R^2}n$$
+$$B=\int_0^a\frac{n\mu_0Q}{\pi R^2}dr=\frac{n\mu_0Qa}{\pi R^2}$$
+
+\section{}
+Similar to Problem 2,
+$$y=r\tan\theta$$
+$$dy=\frac{r}{\cos^2\theta}d\theta$$
+$$B=\int_{-L/2}^{L/2}\frac{\mu_0I\frac{dy}{L}\cos\theta}{2\pi\sqrt{r^2+y^2}}
+=\int_{-\arctan L/2y}^{\arctan L/2y}\frac{\mu_0I}{2\pi L}d\theta=\frac{\mu_0I}{\pi L}\arctan\frac{L}{2y}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$I_0=\int J(r)dS=\int_0^a\frac{b}{r}e^{\frac{r-a}{\delta}}2\pi rdr=2\pi b\delta e^{\frac{r-a}{\delta}}\bigg|_0^a=2\pi b\delta\left(1-e^{-\frac{a}{\delta}}\right)$$
+\item
+$$B(r)\cdot2\pi r=\mu_0I_0$$
+$$B(r)=\frac{\mu_0I_0}{2\pi r}$$
+\item
+$$I=2\pi b\delta e^{\frac{r-a}{\delta}}\bigg|_0^r=2\pi b\delta\left(e^{\frac{r-a}{\delta}}-e^{-\frac{a}{\delta}}\right)=\frac{e^{r/\delta}-1}{e^{a/\delta}-1}I_0$$
+\item
+$$B(r)\cdot2\pi r=\mu_0I$$
+$$B(r)=\frac{e^{r/\delta}-1}{e^{a/\delta}-1}\cdot\frac{\mu_0I_0}{2\pi r}$$
+\end{enumerate}
+
+\section{}
+The identity for the divergence of a curl states that a vector field's curl divergence must always be zero.
+$$\nabla\cdot(\nabla\times B)=0$$
+In the Ampere's law, we can find
+$$\nabla\cdot(\nabla\times B)=\nabla\cdot J=-\frac{\partial\rho}{\partial t}\neq0$$
+So Ampere's law cannot be valid, in general, outside magnetostatics.
+
+\end{document}

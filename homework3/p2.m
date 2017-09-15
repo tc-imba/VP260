@@ -1,0 +1,13 @@
+a=1;b=2;k=1;
+e0=8.854e-12;
+syms E1 E2 E3 r;
+E1(r)=0;
+E2(r)=k*(r^2-a^2)/(2*e0*r^2);
+E3(r)=k*(b^2-a^2)/(2*e0*r^2);
+hold on;
+ezplot(E1,[0 a]);
+ezplot(E2,[a b]);
+ezplot(E3,[b 5]);
+axis([0 5 0 6e10]);
+title('E(r)');
+hold off;

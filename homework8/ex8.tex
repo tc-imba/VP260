@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{stmaryrd}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 8}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+$$B(r)=\frac{\mu_0 I}{2\pi r}$$
+$$|U_{ab}|=\int_d^{d+L}\frac{\mu_0 I}{2\pi r}\cdot vdr=\frac{\mu_0 Iv}{2\pi}\ln\frac{d+L}{d}$$
+According to right-hand rule, point A is at higher potential.
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$E=BLv\cos\varphi$$
+$$F=BIL=\frac{BEL}{R}=\frac{B^2L^2v\cos\varphi}{R}$$
+$$F\cos\varphi=mg\sin\varphi$$
+$$v=\frac{mgR\sin\varphi}{B^2L^2v\cos^2\varphi}$$
+\item
+According to right-hand rule, the direction is from A to B.
+\item
+$$BIL\cos\varphi=mg\sin\varphi$$
+$$I=\frac{mg\tan\varphi}{BL}$$
+\item
+$$P=I^2R=\frac{m^2g^2R\tan^2\varphi}{B^2L^2}$$
+\item
+$$P'=mgv\sin\varphi=\frac{m^2g^2R\sin^2\varphi}{B^2L^2\cos^2\varphi}=\frac{m^2g^2R\tan^2\varphi}{B^2L^2}$$
+The value of $P$ is the same.
+\end{enumerate}
+
+\section{}
+$$\Phi=\int_0^a\int_0^a4t^2ydydx=2a^3t^2$$
+$$\varepsilon=-\frac{d\Phi}{dt}=-4a^3t$$
+So the direction of $I$ is clockwise.
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$B(r)=\frac{\mu_0 I}{2\pi r}$$
+$$\Phi=\int_0^a\int_{d+vt}^{b+d+vt}\frac{\mu_0 I}{2\pi r}drdl=\frac{\mu_0 Ia}{2\pi}\ln\left(1+\frac{b}{d+vt}\right)$$
+\item
+$$I=\frac{\varepsilon}{R}=-\frac{d\Phi}{Rdt}=-\frac{\mu_0 Ia}{2\pi R}\frac{d+vt}{b+d+vt}\frac{-bv}{(d+vt)^2}=\frac{\mu_0 Iabv}{2\pi R(d+vt)(b+d+vt)}$$
+So the direction of $I$ is anti-clockwise.
+\end{enumerate}
+
+\section{}
+The flux in the square loop decreased, so the force pointed to outside the loop, according to left-hand rule, the direction of $I$ is anti-clockwise.
+$$B(r)=\frac{\mu_0 I}{2\pi r}$$
+$$\Phi_0=\int_0^a\int_s^{s+a}\frac{\mu_0 I}{2\pi r}drdx=\frac{\mu_0 Ia}{2\pi}\ln\frac{s+a}{s}$$
+$$I=\frac{\varepsilon}{R}=-\frac{d\Phi}{Rdt}$$
+$$Q=I\int Idt=-\frac{0-\Phi_0}{R}=\frac{\Phi_0}{R}=\frac{\mu_0 Ia}{2\pi R}\ln\frac{s+a}{s}$$
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$\frac{Q}{C}+R\cdot\frac{dQ}{dt}=0$$
+$$C=\frac{\varepsilon_0\varepsilon_rA}{d},\quad R=\frac{\rho d}{A},\quad Q(0)=Q_0$$
+$$\frac{dQ}{dt}+\frac{Q}{RC}=0$$
+$$Q=Q_0e^{-t/RC}=Q_0e^{-t/\rho\varepsilon_0\varepsilon_r}$$
+$$I=\frac{dQ}{dt}=-\frac{Q_0}{\rho\varepsilon_0\varepsilon_r}Q_0e^{-t/\rho\varepsilon_0\varepsilon_r}$$
+$$J_c=\frac{I}{A}=-\frac{Q_0}{\rho A\varepsilon_0\varepsilon_r}e^{-t/\rho\varepsilon_0\varepsilon_r}$$
+\item
+$$J_d=\frac{E}{\rho}=\frac{Q_0d}{\rho A\varepsilon_0\varepsilon_r}e^{-t/\rho\varepsilon_0\varepsilon_r}$$
+$$J_c+J_d=0$$
+\end{enumerate}
+
+\section{}
+In the side AB, we can find $U_{AB}=E\cdot AB$\\
+In other three sides, we can simply find $U=0$\\
+So in the loop, we can find $\varepsilon=E\cdot AB$\\
+Since the magnetic field is constant, $\frac{d\Phi}{dt}=0$\\
+And $\varepsilon=-\frac{d\Phi}{dt}=0$, which reaches a contradiction.
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$A(r)=\frac{1}{2}(B\times r)=\frac{1}{2}B\hat{n_z}\times(x\hat{n_x}+y\hat{n_y}+z\hat{n_z})=\frac{1}{2}(-By\hat{n_x}+Bx\hat{n_y})$$
+\begin{align*}
+B=\nabla\times A
+&=\left(\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z}\right)\hat{n_x}+\left(\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x}\right)\hat{n_y}+\left(\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}\right)\hat{n_z}\\
+&=\frac{1}{2}(B+B)\hat{n_z}\\
+&=B\hat{n_z}
+\end{align*}
+$$div\ A=\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}=0+0=0$$
+\item
+\begin{align*}
+B=\nabla\times A
+&=\left(\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z}\right)\hat{n_x}+\left(\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x}\right)\hat{n_y}+\left(\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}\right)\hat{n_z}\\
+&=(0-0)\hat{n_x}+(0-0)\hat{n_y}+(B-0)\hat{n_z}\\
+&=B\hat{n_z}
+\end{align*}
+$$div\ A=\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}=0$$
+
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$\nabla^2A=\nabla(\nabla\cdot A)-\nabla\times(\nabla\times A)=0-\nabla\times B=-\mu_0J$$
+\item
+The vector potential is defined as
+$$A(r)=\frac{1}{4\pi}\int\frac{\nabla\times v(r')}{|r-r'|}d\tau'$$
+where $v(r')=B(r')$ which is a solenoidal vector field.\\
+Since $\nabla\times B(r')=\mu_0J(r')$
+$$A(r)=\frac{\mu_0}{4\pi}\int\frac{J(r')}{|r-r'|}d\tau'$$
+\end{enumerate}
+
+\end{document}

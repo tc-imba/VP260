@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 1}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+$$E=\frac{1}{4\pi\varepsilon_0}\int_{\theta_1}^{\theta_2}\frac{Q(\cos\theta\hat{n_x}+\sin\theta\hat{n_y})}{r^2(\theta_2-\theta_1)}d\theta
+=\frac{Q[(\sin\theta_2-\sin\theta_1)\hat{n_x}+(\cos\theta_1-\cos\theta_2)\hat{n_y}]}{4\pi\varepsilon_0r^2(\theta_2-\theta_1)}$$
+$$|E|=\frac{-Q}{4\pi\varepsilon_0r^2(\theta_2-\theta_1)}\sqrt{2-2\sin\theta_1\sin\theta_2-2\cos\theta_1\cos\theta_2}=\frac{-Q}{2\pi\varepsilon_0r^2}\cdot\frac{\sin\frac{\theta_1+\theta_2}{2}}{\theta_2-\theta_1}$$
+\begin{align*}
+&|E_A|=\frac{-Q}{2\pi\varepsilon_0r^2}\cdot\frac{2\sqrt{2}}{3\pi}
+&|E_B|=\frac{-Q}{2\pi\varepsilon_0r^2}\cdot\frac{2}{\pi}\\
+&|E_C|=\frac{-Q}{2\pi\varepsilon_0r^2}\cdot\frac{2\sqrt{2}}{\pi}
+&|E_D|=0
+\end{align*}
+$$|E_D|<|E_A|<|E_B|<|E_C|$$
+
+\section{}
+Suppose right to be the direction of x-axis and up to be the direction of the y-axis.\\
+\\
+At point A,
+$$E_1=-\frac{1}{4\pi\varepsilon_0}\cdot\frac{4q}{a^2}\,\hat{n_y}\quad
+E_2=\frac{1}{4\pi\varepsilon_0}\cdot\frac{8q}{a^2}\,\hat{n_y}$$
+$$E_3=\frac{1}{4\pi\varepsilon_0}\cdot\frac{4q}{5a^2}\,\left(\frac{2\sqrt{5}}{5}\hat{n_x}-\frac{\sqrt{5}}{5}\hat{n_y}\right)$$
+$$E_A=\frac{q}{5\pi\varepsilon_0a^2}\left(\frac{2\sqrt{5}}{5}\hat{n_x}+\frac{25-\sqrt{5}}{5}\hat{n_y}\right)
+=(6.43\times10^{20}\,\hat{n_x}+3.27\times10^{21}\,\hat{n_y})\,\rm{N/C}$$
+At point B,
+$$E_1=\frac{1}{4\pi\varepsilon_0}\cdot\frac{q}{a^2}\,\hat{n_x}\quad
+E_2=-\frac{1}{4\pi\varepsilon_0}\cdot\frac{q}{a^2}\,\hat{n_y}$$
+$$E_3=\frac{1}{4\pi\varepsilon_0}\cdot\frac{q}{a^2}\,\left(\frac{\sqrt{2}}{2}\hat{n_x}+\frac{\sqrt{2}}{2}\hat{n_y}\right)$$
+$$E_B=\frac{q}{4\pi\varepsilon_0a^2}\left(\frac{\sqrt{2}+2}{2}\hat{n_x}+\frac{\sqrt{2}-2}{2}\hat{n_y}\right)
+=(1.53\times10^{21}\,\hat{n_x}-2.63\times10^{21}\,\hat{n_y})\,\rm{N/C}$$
+At point C,
+$$E_1=E_2=\frac{1}{4\pi\varepsilon_0}\cdot\frac{2q}{a^2}\,\left(\frac{\sqrt{2}}{2}\hat{n_x}-\frac{\sqrt{2}}{2}\hat{n_y}\right)$$
+$$E_3=\frac{1}{4\pi\varepsilon_0}\cdot\frac{4q}{a^2}\,\left(\frac{\sqrt{2}}{2}\hat{n_x}+\frac{\sqrt{2}}{2}\hat{n_y}\right)$$
+$$E_C=\frac{\sqrt{2}q}{\pi\varepsilon_0a^2}\,\hat{n_x}
+=5.08\times10^{21}\,\hat{n_x}\,\rm{N/C}$$
+\section{}
+Suppose top to be the positive direction,\\
+\\
+The two charges on the left will give a electric field
+$$E_1=-\frac{1}{4\pi\varepsilon_0}\cdot\frac{2q}{(r+a/2)^2+a^2/4}\cdot\frac{a/2}{\sqrt{(r+a/2)^2+a^2/4}}$$
+The two charges on the right will give a electric field
+$$E_2=\frac{1}{4\pi\varepsilon_0}\cdot\frac{2q}{(r-a/2)^2+a^2/4}\cdot\frac{a/2}{\sqrt{(r-a/2)^2+a^2/4}}$$
+As $r\gg a$,
+\begin{align*}
+E=E_1+E_2&\approx\frac{qa}{4\pi\varepsilon_0}\left(\frac{1}{(r-a/2)^3}-\frac{1}{(r+a/2)^3}\right)\\
+&=\frac{qa}{4\pi\varepsilon_0}\cdot\frac{3r^2a+a^3/4}{(r^2-a^2/4)^3}
+\approx\frac{3qa^2}{4\pi\varepsilon_0r^4}
+\end{align*}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$E=\int_0^l\frac{1}{4\pi\varepsilon_0}\cdot\frac{\lambda}{(l+a-x)^2}dx=\frac{\lambda}{4\pi\varepsilon_0}\cdot\frac{1}{l+a-x}\bigg|_0^l=\frac{\lambda}{4\pi\varepsilon_0}\left(\frac{1}{a}-\frac{1}{l+a}\right)
+=\frac{\lambda l}{4\pi\varepsilon_0a(l+a)}$$
+\item
+$$E=\int_0^l\frac{1}{4\pi\varepsilon_0}\cdot\frac{Ax}{(l+a-x)^2}dx
+=\frac{A}{4\pi\varepsilon_0}\left(\frac{l+a}{l+a-x}+ln(l+a-x)\right)\bigg|_0^l
+=\frac{A}{4\pi\varepsilon_0}\left(\frac{l}{a}+ln\frac{a}{l+a}\right)$$
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$E=\int_{R_1}^{R_2}\frac{1}{4\pi\varepsilon_0}\cdot\frac{x\sigma2\pi rdr}{(x^2+r^2)^{3/2}}
+=\frac{\sigma x}{2\varepsilon_0}\int_{x^2+R_1^2}^{x^2+R_2^2}\frac{du}{2u^{3/2}}
+=\frac{\sigma x}{2\varepsilon_0}\left(\frac{1}{\sqrt{x^2+R_1^2}}-\frac{1}{\sqrt{x^2+R_2^2}}\right)$$
+
+\item
+When $x\ll R_1<R_2$,
+$$E\approx\frac{\sigma x}{2\varepsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$$
+It is approximately proportional to the distance from the center.
+$$mg=\frac{q\sigma x_0}{2\varepsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$$
+$$F=\frac{q\sigma(x-x_0)}{2\varepsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$$
+$$k=\frac{q\sigma}{2\varepsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$$
+$$T=2\pi\sqrt{\frac{m}{k}}=2\pi\sqrt{\frac{2m\varepsilon_0R_1R_2}{q\sigma(R_2-R_1)}}$$
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+\begin{align*}
+F&=\frac{1}{4\pi\varepsilon_0}\int_0^l\int_0^l\frac{Q\frac{dx}{l}\cdot Q\frac{dy}{l}}{(a+x+y)^2}\\
+&=\frac{Q^2}{4\pi\varepsilon_0l^2}\int_0^l\int_0^l\frac{1}{(a+x+y)^2}dydx\\
+&=\frac{Q^2}{4\pi\varepsilon_0l^2}\int_0^l\left(\frac{1}{a+x}-\frac{1}{a+x+l}\right)dx\\
+&=\frac{Q^2}{4\pi\varepsilon_0l^2}ln\frac{a+x}{a+x+l}\bigg|_0^l\\
+&=\frac{Q^2}{4\pi\varepsilon_0l^2}ln\left[\frac{(a+l)^2}{a(a+2l)}\right]
+\end{align*}
+
+\item
+$$\lim_{x\to 0}\frac{ln(x+1)}{x}=1$$
+$$ln(x+1)\approx x\ when\ x\to 0$$
+$$\frac{(a+l)^2}{a(a+2l)}=1+\frac{l^2}{a^2+2al}$$
+If $a\gg l$,
+$$ln\left[\frac{(a+l)^2}{a(a+2l)}\right]\approx\frac{l^2}{a^2+2al}$$
+$$F\approx\frac{Q^2}{4\pi\varepsilon_0l^2}\cdot\frac{l^2}{a^2+2al}
+=\frac{Q^2}{4\pi\varepsilon_0(a^2+2al)}
+\approx\frac{Q^2}{4\pi\varepsilon_0a^2}$$
+\end{enumerate}
+
+\end{document}

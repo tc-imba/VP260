@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{stmaryrd}
+\geometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=4.0cm}
+\renewcommand{\thesection}{Problem \arabic{section}.}
+\title{VP260 PROBLEM SET 10}
+\author{Liu Yihao 515370910207}
+\date{}
+\begin{document}
+\maketitle
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$v_s=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}I$$
+$$v_{hi}=\sqrt{R^2+(\omega L)^2}I$$
+$$\frac{v_{hi}}{v_s}=\frac{\sqrt{R^2+(\omega L)^2}}{\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}}$$
+When $\omega$ is small,
+$$\frac{v_{hi}}{v_s}\approx\sqrt{\frac{R^2}{R^2-2LC+1/\omega^2C^2}}\approx\sqrt{R^2\omega^2C^2}=RC\omega$$
+When $\omega$ is large,
+$$\frac{v_{hi}}{v_s}\approx\sqrt{\frac{\omega^2L^2}{\omega^2L^2}}=1$$
+\item
+$$v_{lo}=\frac{1}{\omega C}I$$
+$$\frac{v_{lo}}{v_s}=\frac{1}{\omega C}\sqrt{\frac{1}{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}}$$
+When $\omega$ is large,
+$$\frac{v_{hi}}{v_s}\approx\frac{1}{\omega C}\sqrt{\frac{1}{\omega^2L^2}}=\frac{1}{LC}\omega^{-2}$$
+When $\omega$ is small,
+ $$\frac{v_{hi}}{v_s}\approx\frac{1}{\omega C}\sqrt{\frac{1}{R^2-2LC+1/\omega^2C^2}}\approx\frac{1}{\omega C}\sqrt{\omega^2C^2}=1$$
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+According to KCL, $i=i_R+i_L+i_C$\\
+According to KVL, $v=v_R+v_L+v_C$\\
+\item
+$$i_R=\frac{V\angle0}{R}=\frac{V}{R}\angle0,\phi=0$$
+$$i_L=\frac{V\angle0}{j\omega L}=\frac{V}{\omega L}\angle-\frac{1}{2}\pi,\phi=-\frac{1}{2}\pi$$
+$$i_C=\frac{V\angle0}{1/j\omega C}=\omega CV\angle\frac{1}{2}\pi,\phi=\frac{1}{2}\pi$$
+\item
+$$I=I_R+I_L+I_C=V\left[\frac{1}{R}+j\left(\omega C-\frac{1}{\omega L}\right)\right]$$
+$$|I|=\sqrt{\frac{V^2}{R^2}+\left(\omega CV-\frac{V}{\omega L}\right)^2}=\sqrt{I_R^2+(I_C-I_L)^2}$$
+$$Z^{-1}=\frac{I}{V}=\sqrt{\frac{1}{R^2}+\left(\omega C-\frac{1}{\omega L}\right)^2}$$
+\item
+When $\omega=\dfrac{1}{\sqrt{LC}}$,
+$$I_C-I_L=\frac{C}{\sqrt{LC}}-\frac{\sqrt{LC}}{L}=0$$
+Since $I=\sqrt{I_R^2+(I_C-I_L)^2}$, $I_{min}=I_R$
+$$P=\frac{V^2}{R}=\frac{V^2\cos^2\omega t}{R}$$
+$$\overline{P}=\frac{\omega}{2\pi}\int_0^{2\pi/\omega}\frac{V^2\cos^2\omega t}{R}=\frac{V^2}{2R}$$
+So the instant power is decided by $t$ and the average power is constant. It is wrong to say that the power delivered to the resistor is also a minimum.
+\item
+In LRC parallel circuit,
+$$I=V\left[\frac{1}{R}+j\left(\omega C-\frac{1}{\omega L}\right)\right]$$
+$$\phi=\arctan\left(\frac{\omega C-\frac{1}{\omega L}}{\frac{1}{R}}\right)=0$$
+In LRC series circuit,
+$$I=\frac{V}{R+j\left(\omega L-\frac{1}{\omega C}\right)}=\frac{V\left[R-j\left(\omega L-\frac{1}{\omega C}\right)\right]}{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}$$
+$$\phi=\arctan\left(-\frac{\omega L-\frac{1}{\omega C}}{R}\right)=0$$
+
+\end{enumerate}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$a=\frac{v^2}{r}=\frac{\frac{1}{2}mv^2}{\frac{1}{2}mr}=\frac{2E_k}{mr}=1.533\times10^{15}m/s^2$$
+$$\Delta E\approx\frac{q^2a^2}{6\pi\varepsilon_0c^3}=1.340\times10^{-23}J$$
+$$\frac{\Delta E}{E}=1.394\times10^{-11}$$
+\item
+$$v=\sqrt{\frac{2E_k}{m_p}}=3.390\times10^7m/s$$
+$$a=\frac{v^2}{r}=1.533\times10^{15}m/s^2$$
+$$\Delta E\approx\frac{q^2a^2}{6\pi\varepsilon_0c^3}=1.340\times10^{-23}J$$
+$$\frac{\Delta E}{\frac{1}{2}m_ev^2}=2.559\times10^{-8}$$
+\item
+$$a=\frac{2E_k}{mr}=4.834\times10^{19}m/s^2$$
+$$\Delta E\approx\frac{q^2a^2}{6\pi\varepsilon_0c^3}=1.334\times10^{-14}J$$
+$$\frac{\Delta E}{E}=6.121\times10^3$$
+So we can;t use classical physics in describing the atom within the model.
+\end{enumerate}
+
+\section{}
+\begin{align*}
+\frac{\partial^2f_1}{\partial x^2}&=
+Ak[(2x-2vt)^2-2]e^{-k(x-vt)^2}\\
+\frac{\partial^2f_1}{\partial t^2}&=
+Akv^2[(2x-2vt)^2-2]e^{-k(x-vt)^2}\\
+\frac{\partial^2f_1}{\partial x^2}&=
+\frac{1}{v^2}\frac{\partial^2f_1}{\partial t^2},
+{\rm so\ it\ satisfies.}\\
+\\
+\frac{\partial^2f_2}{\partial x^2}&=
+-Ak^2\sin[k(x-vt)]\\
+\frac{\partial^2f_2}{\partial t^2}&=
+-Ak^2v^2\sin[k(x-vt)]\\
+\frac{\partial^2f_2}{\partial x^2}&=
+\frac{1}{v^2}\frac{\partial^2f_2}{\partial t^2},
+{\rm so\ it\ satisfies.}\\
+\\
+\frac{\partial^2f_3}{\partial x^2}&=
+\frac{6Ak^2(x-vt)^2-2Ak}{[k(x-vt)^2+1]^3}\\
+\frac{\partial^2f_3}{\partial t^2}&=
+\frac{6Ak^2v^2(x-vt)^2-2Akv^2}{[k(x-vt)^2+1]^3}\\
+\frac{\partial^2f_3}{\partial x^2}&=
+\frac{1}{v^2}\frac{\partial^2f_3}{\partial t^2},
+{\rm so\ it\ satisfies.}\\
+\\
+\frac{\partial^2f_4}{\partial x^2}&=
+Ak^2(4k^2x^2-2)e^{-k(kx^2+vt)}\\
+\frac{\partial^2f_4}{\partial t^2}&=
+Ak^2v^2e^{-k(kx^2+vt)}\\
+\frac{\partial^2f_4}{\partial x^2}&\neq
+\frac{1}{v^2}\frac{\partial^2f_4}{\partial t^2},
+{\rm so\ it\ doesn't\ satisfy.}\\
+\\
+\frac{\partial^2f_5}{\partial x^2}&=
+-Ak^2\sin(kx)\cos(kvt)^3\\
+\frac{\partial^2f_5}{\partial t^2}&=
+-Ak^3v^3t\sin(kx)[6\sin(kvt)^3+9(kvt)^3\cos(kvt)^3]\\
+\frac{\partial^2f_5}{\partial x^2}&\neq
+\frac{1}{v^2}\frac{\partial^2f_5}{\partial t^2},
+{\rm so\ it\ doesn't\ satisfy.}\\
+\end{align*}
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+\begin{align*}
+\frac{\partial^2\xi}{\partial x^2}&=
+-Ak^2\sin(kx)\cos(\omega t)\\
+\frac{\partial^2\xi}{\partial t^2}&=
+-A\omega^2\sin(kx)\cos(\omega t)\\
+\frac{\partial^2\xi}{\partial x^2}&=
+\frac{k^2}{\omega^2}\frac{\partial^2\xi}{\partial t^2},
+{\rm so\ it\ satisfies.}\\
+\end{align*}
+\item
+\begin{align*}
+\xi(x,t)&=\frac{1}{2}Asin(kx+\omega t)+\frac{1}{2}Asin(kx-\omega t)\\
+&=\frac{1}{2}Asin(k(x+vt))+\frac{1}{2}Asin(k(x-vt))
+\end{align*}
+\end{enumerate}
+
+\section{}
+$$\frac{\partial\xi}{\partial x}=\frac{\partial\xi}{\partial\alpha}\cdot\frac{\partial\alpha}{\partial x}+\frac{\partial\xi}{\partial\beta}\cdot\frac{\partial\beta}{\partial x}=\frac{\partial\xi}{\partial\alpha}+\frac{\partial\xi}{\partial\beta}$$
+$$\frac{\partial^2\xi}{\partial x^2}=\frac{\partial^2\xi}{\partial\alpha^2}+2\frac{\partial^2\xi}{\partial\alpha\partial\beta}+\frac{\partial^2\xi}{\partial\beta^2}$$
+
+$$\frac{\partial\xi}{\partial t}=\frac{\partial\xi}{\partial\alpha}\cdot\frac{\partial\alpha}{\partial t}+\frac{\partial\xi}{\partial\beta}\cdot\frac{\partial\beta}{\partial t}=v\left(\frac{\partial\xi}{\partial\alpha}-\frac{\partial\xi}{\partial\beta}\right)$$
+$$\frac{\partial^2\xi}{\partial t^2}=v^2\left(\frac{\partial^2\xi}{\partial\alpha^2}-2\frac{\partial^2\xi}{\partial\alpha\partial\beta}+\frac{\partial^2\xi}{\partial\beta^2}\right)$$
+
+$$\frac{\partial^2\xi}{\partial x^2}-\frac{1}{v^2}\cdot\frac{\partial^2\xi}{\partial t^2}=4\frac{\partial^2\xi}{\partial\alpha\partial\beta}=0$$
+$$\frac{\partial^2\xi}{\partial\alpha\partial\beta}=0$$
+In the equation
+$$\xi(x,t)=\xi_1(\alpha)+\xi_2(\beta)$$
+$$\frac{\partial^2\xi}{\partial\alpha\partial\beta}=0+0=0$$
+So it may be expressed.
+
+\section{}
+\begin{enumerate}[(a)]
+\item
+$$\frac{\partial^2E_y}{\partial x^2}=-2E_0k_C^2e^{-k_Cx}\cos(k_Cx-\omega t)=-E_0\omega\frac{\mu}{\rho}e^{-k_Cx}\cos(k_Cx-\omega t)$$
+$$\frac{\partial E_y}{\partial t}=-E_0\omega e^{-k_Cx}\cos(k_Cx-\omega t)$$
+$$\frac{\partial^2E_y}{\partial x^2}=\frac{\mu}{\rho}\frac{\partial E_y}{\partial t}$$
+\item
+The electric field decays because the energy is transformed into heat when it propagates. The transformation ratio is proportional to $x$, then
+$$\frac{\partial E_y'}{\partial x}=-k_Cx$$
+$$E_y'=E_0e^{-k_Cx}$$
+\item
+$$\frac{1}{k_C}=\sqrt{\frac{2\rho}{\omega\mu}}=6.60\times10^{-5}m$$
+\end{enumerate}
+
+
+\end{document}
